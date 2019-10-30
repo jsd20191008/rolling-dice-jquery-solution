@@ -1,6 +1,12 @@
 // document ready function
 $(function () {
   // listen for click event on button with id='roll-dice'
+
+  /* Vanilla JavaScript way to lisen for a click event:
+    document.getElementById('roll-dice').onclick = rollDice
+  */
+
+  /* jQuery way to listen for a click event */
   $('#roll-dice').click(() => {
     console.log('dice is being rolled!')
 
@@ -32,6 +38,15 @@ $(function () {
   // updating our page
   function updatePage (firstDieClass, secondDieClass) {
     // dynamically apply new class names to the dom (html page)
+
+    /*
+      Vanilla JavaScript way to apply a new class to an element:
+
+      document.getElementById('first-die').className = firstClass
+      document.getElementById('second-die').className = secondClass
+    */
+
+    /* jQuery way to apply a new class to an element */
     $('#first-die').attr('class', firstDieClass)
     $('#second-die').attr('class', secondDieClass)
   }
